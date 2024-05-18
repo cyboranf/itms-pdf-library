@@ -6,4 +6,19 @@
   <version>1.0-SNAPSHOT</version>
   <name>Archetype - itms-library</name>
   <url>http://maven.apache.org</url>
+  <packaging>jar</packaging>
+
+  <dependencies>
+    <!-- iText PDF library dependencies -->
+    <dependency>
+      <groupId>com.itextpdf</groupId>
+      <artifactId>kernel</artifactId>
+      <version>8.0.2</version>
+    </dependency>
+    <dependency>
+      <groupId>com.itextpdf</groupId>
+      <artifactId>layout</artifactId>
+      <version>8.0.2</version>
+    </dependency>
+  </dependencies>
 </project>
