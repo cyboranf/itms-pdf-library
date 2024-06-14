@@ -73,12 +73,12 @@ public class PdfGeneratorService {
             document.add(ls);
 
             // Define table with 6 columns
-            Table table = new Table(UnitValue.createPercentArray(new float[]{2, 2, 2, 2, 2, 2}))
+            Table table = new Table(UnitValue.createPercentArray(new float[]{2, 2, 2, 2, 2}))
                     .setWidth(UnitValue.createPercentValue(100))
                     .setMarginBottom(20);
 
             // Add header cells
-            String[] headers = {"Username", "Name", "Lastname", "PESEL", "Email", "Phone Number"};
+            String[] headers = {"Username", "Name", "Lastname", "Email", "Phone Number"};
             for (String header : headers) {
                 table.addHeaderCell(new Paragraph(header)
                         .setBackgroundColor(ColorConstants.LIGHT_GRAY)
@@ -91,7 +91,6 @@ public class PdfGeneratorService {
                 table.addCell(new Paragraph(user.getUsername()).setBorder(Border.NO_BORDER));
                 table.addCell(new Paragraph(user.getName()).setBorder(Border.NO_BORDER));
                 table.addCell(new Paragraph(user.getLastname()).setBorder(Border.NO_BORDER));
-                table.addCell(new Paragraph(user.getPesel()).setBorder(Border.NO_BORDER));
                 table.addCell(new Paragraph(user.getEmail()).setBorder(Border.NO_BORDER));
                 table.addCell(new Paragraph(user.getPhoneNumber()).setBorder(Border.NO_BORDER));
 
